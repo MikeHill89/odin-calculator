@@ -5,28 +5,69 @@ body{
     padding: 0;
     flex: 1;
     align-items: center;
+    justify-content: space-between;
 }
 .main{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
     margin : 0 auto;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     background-color: grey;
     width: 350px;
     height: 500px;
     padding: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .display{
     display: flex;
-    flex: 1;
+    height: 20%;
     align-items: flex-end;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     justify-content: flex-end;
     padding: 1rem;
-    height: 20%;
     background-color: lightblue;;
 }
 
 .display-digits{
     font-size: 2rem;
+}
+.buttons-menu{
+    display: flex;
+    height: 10%;
+    gap: 1rem;
+
+}
+.buttons-menu button{
+    flex: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.grid{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.buttons-grid-container{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.grid-item {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: grid;
+    background-color: lightblue;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item:hover{
+    background-color: red;
+}
+.grid-item:active{
+    background-color: orange;
 }
