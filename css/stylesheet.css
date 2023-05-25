@@ -56,7 +56,7 @@ body{
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-.grid-item {
+.grid-item, .operator{
     margin: 5px;
     border: 1px solid black;
     border-radius: 50%;
@@ -65,9 +65,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-.grid-item:hover{
+.grid-item:hover, .operator:hover{
     background-color: red;
 }
-.grid-item:active{
+.grid-item:active, .operator:active{
     background-color: orange;
 }

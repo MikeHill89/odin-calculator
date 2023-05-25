@@ -1,42 +1,39 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>The Odin Project - Calculator</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/stylesheet.css" rel="stylesheet">
-    <script src="js/script.js">
+    <script defer src="js/script.js">
     </script>
 </head>
 
 <body>
     <div class="main">
         <div class="display">
-            <numbers class="display-digits">500</numbers>
+            <numbers class="display-digits"></numbers>
         </div>
         <div class="buttons-menu">
-            <button class="clear">Clear</button>
+            <button class="delete">Delete</button>
             <button class="reset">Reset</button>
         </div>
         <div class="grid">
             <div class="buttons-grid-container">
-                <div class="grid-item digit">7</div>
-                <div class="grid-item digit">8</div>
-                <div class="grid-item digit">9</div>
-                <div class="grid-item digit">÷</div>
-                <div class="grid-item digit">4</div>
-                <div class="grid-item digit">5</div>
-                <div class="grid-item digit">6</div>
-                <div class="grid-item operator">X</div>
-                <div class="grid-item digit">1</div>
-                <div class="grid-item digit">2</div>
-                <div class="grid-item digit">3</div>
-                <div class="grid-item operator">+</div>
-                <div class="grid-item digit">0</div>
-                <div class="grid-item operator">.</div>
-                <div class="grid-item operator">=</div>
-                <div class="grid-item operator">-</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+                <div id="divide" class="operator">÷</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div id="multiply" class="operator">X</div>
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div id="add" class="operator">+</div>
+                <div class="grid-item">0</div>
+                <div class="grid-item">.</div>
+                <div class="grid-item calculate">=</div>
+                <div id="substract" class="operator">-</div>
             </div>
         </div>
     </div>
