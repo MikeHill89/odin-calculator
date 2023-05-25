@@ -9,7 +9,7 @@ let operator;
 let n1;
 
 const getNumberFromDisplay = () => {
-    tempnumber = parseInt(display.innerText);
+    tempnumber = parseFloat(display.innerText);
     return tempnumber;
 }
 const getOperator = (event) => {
