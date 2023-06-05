@@ -1,5 +1,5 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
     <title>The Odin Project - Calculator</title>
     <link href="css/stylesheet.css" rel="stylesheet">
@@ -9,31 +9,33 @@
 
 <body>
     <div class="main">
+        <div class="logo">BITIZEN</div>
         <div class="display">
-            <numbers class="display-digits"></numbers>
+            <div class="current"></div>
+            <div class="previous"></div>
         </div>
         <div class="buttons-menu">
-            <button class="delete">Delete</button>
-            <button class="reset">Reset</button>
+            <button class="delete">DEL</button>
+            <button class="reset">AC</button>
         </div>
         <div class="grid">
             <div class="buttons-grid-container">
-                <div class="grid-item">7</div>
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
+                <div class="grid-item number" data-value="7">7</div>
+                <div class="grid-item number" data-value="8">8</div>
+                <div class="grid-item number" data-value="9">9</div>
                 <div id="divide" class="operator">÷</div>
-                <div class="grid-item">4</div>
-                <div class="grid-item">5</div>
-                <div class="grid-item">6</div>
+                <div class="grid-item number" data-value="4">4</div>
+                <div class="grid-item number" data-value="5">5</div>
+                <div class="grid-item number" data-value="6">6</div>
                 <div id="multiply" class="operator">X</div>
-                <div class="grid-item">1</div>
-                <div class="grid-item">2</div>
-                <div class="grid-item">3</div>
+                <div class="grid-item number" data-value="1">1</div>
+                <div class="grid-item number" data-value="2">2</div>
+                <div class="grid-item number" data-value="3">3</div>
                 <div id="add" class="operator">+</div>
-                <div class="grid-item">0</div>
-                <div class="grid-item">.</div>
-                <div class="grid-item calculate">=</div>
+                <div class="grid-item number" data-value="0">0</div>
+                <div class="grid-item number" data-value=".">.</div>
                 <div id="substract" class="operator">-</div>
+                <div class="grid-item" id="calculate">=</div>
             </div>
         </div>
     </div>
