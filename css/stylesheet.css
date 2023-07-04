@@ -39,6 +39,11 @@ body{
 .current {
     font-size: 2rem;
 }
+.previous{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
 
 .buttons-menu{
     display: flex;
