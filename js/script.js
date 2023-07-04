@@ -107,22 +107,23 @@ operators.forEach((operator) => {
       numbers.forEach((number) => {
       number.disabled = false;
       })
-      
-      
       let clickedOperator = event.currentTarget;  
-      if (operatorUsed ){
-          savedValue = operate(operatorUsed,savedValue,displayedValue);
-          operatorUsed = clickedOperator.id;
-          display.textContent = "";
-          previous.textContent = savedValue + clickedOperator.textContent;
-          return;
+        if (operatorUsed && result){
+            savedValue = result;
+            operatorUsed = clickedOperator.id;
+            previous.textContent = savedValue + clickedOperator.textContent;
+            display.textContent = "";
+            result = "";
+            return;
         }
+        operate(operatorUsed,savedValue,displayedValue); 
         savedValue = displayedValue;
-        displayedValue = "";
+        displayedValue = parseFloat(display.textContent);
         operatorUsed = clickedOperator.id;
         console.log(operatorUsed);
         previous.textContent = savedValue + clickedOperator.textContent;
         display.textContent = "";
+        result = "";
   
     });
 })
@@ -133,7 +134,6 @@ const operate = (operator, n1, n2) => {
     if (n2 === ""){
       return calculateButton.click()
     }
-    let result;
     switch (operator) {
         case "add":
             result = n1 + n2;
@@ -170,6 +170,7 @@ calculateButton.addEventListener('click', () =>{
     }
     
     display.textContent = operate(operatorUsed,savedValue, displayedValue);
+    result = parseFloat(display.textContent)
     if (display.textContent.length > 15){
       display.textContent = display.textContent.substring(0,15);
     }
