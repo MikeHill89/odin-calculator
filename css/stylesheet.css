@@ -1,5 +1,6 @@
 body{
     display: flex;
+    background-color: #00cccc;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -68,9 +69,18 @@ body{
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-.grid-item, .operator{
+.operator{
     margin: 5px;
-    border: 1px solid grey;
+    border: 1px solid orange;
+    border-radius: 10px;
+    display: grid;
+    background-color: lightgrey;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item{
+    margin: 5px;
+    border: 1px solid blue;
     border-radius: 10px;
     display: grid;
     background-color: lightgrey;
