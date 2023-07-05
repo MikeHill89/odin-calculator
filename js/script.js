@@ -49,7 +49,6 @@ dotButton.addEventListener('click', () => {
   disableDotButton();
 })
 
-
 //resets the calculator
 resetButton.addEventListener('click', () => {
     enableOperators();
@@ -116,6 +115,12 @@ operators.forEach((operator) => {
             result = "";
             return;
         }
+      if (operatorUsed && display.textContent === ""){
+        operatorUsed = clickedOperator.id;
+        previous.textContent = savedValue + clickedOperator.textContent;
+        
+        return;
+      }
         operate(operatorUsed,savedValue,displayedValue); 
         savedValue = displayedValue;
         displayedValue = parseFloat(display.textContent);
@@ -180,4 +185,11 @@ calculateButton.addEventListener('click', () =>{
     numbers.forEach((number) => {
       number.disabled = true;
     })
+});
+
+window.addEventListener('keydown', function(e) {
+  const keyCode = e.keyCode || e.key;
+  const button = document.querySelector(`button[data-key*="${keyCode}"]`);
+  if (!button) return;
+  button.click();
 });
